@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "waydesgin-checkout-app"
+client_id = "d4ac1e56547fe55b4014a55ee5cf0672"
+application_url = "https://decline-bond-setting-inter.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products, read_customers, write_customers, read_checkouts, write_checkouts, read_orders, write_orders"
+
+[auth]
+redirect_urls = [
+  "https://decline-bond-setting-inter.trycloudflare.com/auth/callback",
+  "https://decline-bond-setting-inter.trycloudflare.com/auth/shopify/callback",
+  "https://decline-bond-setting-inter.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "danieldevshoptest.myshopify.com"
